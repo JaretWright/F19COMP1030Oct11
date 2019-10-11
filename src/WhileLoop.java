@@ -11,12 +11,22 @@ public class WhileLoop {
         String pw = keyboard.nextLine();
 
         //check if it is valid
-        if (pw.equals("turkeyTime"))
-            System.out.printf("Success");
-        else
-            System.out.printf("Wrong password");
+        while (!pw.equals("turkeyTime"))
+        {
+            System.out.printf("That password was invalid.  Enter another:");
+            pw=keyboard.nextLine();
+        }
 
         //if it is not valid as for the password again
         //tell the user they entered a valid password
+        System.out.printf("Success");
+
+        System.out.printf("%nNow with a do...while loop%n");
+        do {
+            System.out.printf("Enter a password");
+            pw = keyboard.nextLine();
+        } while (!pw.equals("dessert"));
+
+        System.out.printf("You earned a break%n");
     }
 }
